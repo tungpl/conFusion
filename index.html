@@ -101,11 +101,78 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding:40px;"></p>
-                    <a href="#reserveFrm" class="btn btn-warning btn-block" role="button">Reserve Table</a>
+                    <a class="btn btn-warning btn-block" role="button" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
+	
+	<div id="reserveModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content for reserve a table -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" style="font-weight: bold">Reserve Table </h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label  class="col-sm-2 control-label">Number of Guests</label>
+							<div class="col-sm-10">
+								<p style="padding:2px;"></p>
+								<input type="radio" name="guest">
+								<span>&nbsp; 1 &nbsp;</span>
+								<input type="radio" name="guest">
+								<span>&nbsp; 2 &nbsp;</span>
+								<input type="radio" name="guest">
+								<span>&nbsp; 3 &nbsp;</span>
+								<input type="radio" name="guest">
+								<span>&nbsp; 4 &nbsp;</span>
+								<input type="radio" name="guest">
+								<span>&nbsp; 5 &nbsp;</span>
+								<input type="radio" name="guest">
+								<span>&nbsp; 6 &nbsp;</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label  class="col-sm-2 control-label">Section</label>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-success active">
+								<input type="radio" name="section" id="non-smoking" autocomplete="off" checked>Non-smoking
+							  </label>
+							  <label class="btn btn-danger">
+								<input type="radio" name="section" id="smoking" autocomplete="off">Smoking
+							  </label>							  
+							</div>
+						</div>
+						<div class="form-group has-feedback">
+							<label class="col-sm-2 control-label" for="date-choose">Date and Time</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="date-choose" placeholder="Date">
+								<i class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></i>
+							</div>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="time-choose" placeholder="Time">
+								<i class="glyphicon glyphicon-time form-control-feedback" aria-hidden="true"></i>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="date-choose"></label>
+							<span class="col-sm-4"><button class="btn btn-primary">Reserve</button>
+							<button type="button" class="btn btn-default btn-sm" data-dismiss='modal'>Cancel</button>
+							</span>	
+						</div>
+						<div class="alert alert-warning alert-dismissible" role="alert">
+							<button type="submit" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+							</button>
+							<strong>Warning!</strong> Please <a href="tel:+19108636888"><strong>call</strong></a> us to reserve for more than six guests.
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
     <div class="container">
 		<div class="row row-content">
@@ -236,7 +303,7 @@
               </div>
             </div>
         </div>
-        <div class="row row-content" id="reserveFrm">
+        <!--div class="row row-content" id="reserveFrm">
             <div class="col-xs-12 col-sm-3">
                 <p style="padding:20px;"></p>
                 <h3 align=center>Reserve a Table</h3>
@@ -286,7 +353,7 @@
                 </form>
             </div>
 
-        </div>
+        </div-->
     </div>
 
     <footer>
