@@ -60,7 +60,7 @@
                     <li><a href="contactus.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
                 </ul>
 				<ul class="nav vanvar-nav navbar-right">
-					<li><a onclick="toggleLogin();"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+					<li><a id="loginBtn"><span class="glyphicon glyphicon-log-in"></span>Login</a>
 				</ul>
             </div>
         </div>
@@ -101,7 +101,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding:40px;"></p>
-                    <a class="btn btn-warning btn-block" role="button" onclick="toggleReserve();">Reserve Table</a>
+                    <a class="btn btn-warning btn-block" role="button" id="reserveBtn">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -419,12 +419,12 @@
 		});
 
 		//Assignment 4: trigger modal using javascript
-		function toggleLogin(){
+		$("#loginBtn").click(function (){
 			$('#loginModal').modal('toggle');
-		}
-		function toggleReserve(){
+		});
+			$("#reserveBtn").click(function (){
 			$('#reserveModal').modal('toggle');
-		}
+		});
 	</script>
 </body>
 </html>
